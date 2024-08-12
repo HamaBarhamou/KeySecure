@@ -1,6 +1,3 @@
-Voici la mise à jour du fichier `README.md` pour refléter les étapes nécessaires pour démarrer le projet KeyCluster et atteindre l'état actuel :
-
-```markdown
 # KeyCluster: Scalable IAM with Keycloak
 
 ## Introduction
@@ -84,4 +81,4 @@ Pour toute question ou pour discuter de ce projet, n'hésitez pas à me contacte
 - **Nom :** Issaka Hama Barhamou
 - **Email :** [hamabarhamou@gmail.com](mailto:hamabarhamou@gmail.com)
 - **Portfolio :** [portfolio](https://0qx-driven-pascal.circumeo-apps.net/)
-```
+
