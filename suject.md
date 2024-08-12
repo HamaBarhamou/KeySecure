@@ -1,4 +1,4 @@
-### **Projet de Fin d'Études : Mise en Place et Gestion d'une Infrastructure IAM avec Keycloak en Environnement Distribué**
+### **Projet de Démonstration : Mise en Place et Gestion d'une Infrastructure IAM avec Keycloak en Environnement Distribué**
 
 #### **Titre du Projet :**
 **Conception et Mise en Place d'une Infrastructure de Gestion des Identités et des Accès (IAM) Distribuée avec Keycloak**
