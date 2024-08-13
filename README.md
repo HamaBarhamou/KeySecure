@@ -42,7 +42,7 @@ L'objectif principal de **KeyCluster** est de créer une infrastructure IAM rés
 ### Prérequis
 
 - Docker et Docker Compose doivent être installés sur votre machine.
-- Assurez-vous que les ports 8081-8084 et 3307 sont libres sur votre machine.
+- Assurez-vous que les ports 8081-8083 et 3307 sont libres sur votre machine.
 
 ### Étapes pour démarrer le projet
 
@@ -67,9 +67,21 @@ L'objectif principal de **KeyCluster** est de créer une infrastructure IAM rés
    - Identifiants par défaut : `admin` / `admin`.
 
 4. **Vérification du Clustering :**
+
    - **Création d'un Realm et Vérification de la Réplication :**
-     - Créez un nouveau Realm sur l'une des instances Keycloak (par exemple, sur Node 1 via [http://localhost:8080](http://localhost:8080)).
-     - Accédez à l'interface d'administration des autres instances (Nodes 2 et 3) et vérifiez que le Realm est également présent sur ces nœuds.
+     - Le script `check_realm_replication.py` permet de tester la création d'un Realm sur le premier nœud et de vérifier sa réplication sur les autres nœuds.
+     - Exécutez le script :
+       ```bash
+       python check_realm_replication.py
+       ```
+     - Le script va créer un Realm nommé `test-realm` sur le Node 1 et vérifiera sa présence sur les Nodes 2 et 3.
+
+   - **Redémarrage des Instances :**
+     - Le script `test_clustering.py` redémarre successivement chaque instance de Keycloak pour vérifier la résilience du cluster.
+     - Exécutez le script :
+       ```bash
+       python test_clustering.py
+       ```
 
    - **Synchronisation des Sessions :**
      - Connectez-vous à l'interface d'administration de l'une des instances (par exemple, Node 1).
